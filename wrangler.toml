@@ -1,0 +1,9 @@
+main = "./src/index.ts"
+name = "zenmirror-worker"
+compatibility_date = "2022-07-26"
+node_compat = true
+
+[[r2_buckets]]
+binding = 'MY_BUCKET' # <~ valid JavaScript variable name
+bucket_name = 'zen'
+preview_bucket_name = 'zen-preview'
