@@ -72,7 +72,7 @@ export default {
 				}
 				else return new Response('File Not Found', {status: 404})
 			}
-			const md5 = a.checksum
+			const md5 = a.checksum.split(':')[1] // md5:xxxxxx...
 			const fileObjectKey = `md5/${md5[0]}${md5[1]}/${md5[2]}${md5[3]}/${md5[4]}${md5[5]}/${md5}`
 			let fileObject = await env.MY_BUCKET.get(fileObjectKey)
 			if (!fileObject) {
